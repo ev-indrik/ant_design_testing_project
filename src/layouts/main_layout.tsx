@@ -2,7 +2,7 @@ import { Flex, Layout, Menu, MenuProps } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import React from "react";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const headerStyle: React.CSSProperties = {
   textAlign: "center",
@@ -43,15 +43,15 @@ const layoutStyle = {
 const items = [
   {
     key: "home",
-    label: "Home",
+    label: <NavLink to="/">Home</NavLink>,
   },
   {
     key: "buttons",
-    label: "Buttons",
+    label: <NavLink to="buttons">Buttons</NavLink>,
   },
   {
     key: "form",
-    label: "Form",
+    label: <NavLink to="forms">Forms</NavLink>,
   },
 ];
 
