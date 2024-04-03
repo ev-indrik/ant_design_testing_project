@@ -1,4 +1,5 @@
-import "./App.css";
+import "./App.scss";
+import "./index.scss";
 
 import {
   createBrowserRouter,
@@ -13,6 +14,8 @@ import Buttons from "./pages/Buttons";
 
 //layouts
 import MainLayout from "./layouts/main_layout";
+import { ConfigProvider, Layout } from "antd";
+import { theme } from "./themes";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,11 +28,11 @@ const router = createBrowserRouter(
 
 const App = () => {
   return (
-    <>
-      <div>
+    <ConfigProvider theme={theme}>
+      <Layout className={"appLayout"}>
         <RouterProvider router={router} />
-      </div>
-    </>
+      </Layout>
+    </ConfigProvider>
   );
 };
 

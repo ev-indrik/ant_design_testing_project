@@ -1,13 +1,15 @@
-import { Flex, Layout } from "antd";
+import { Flex, Layout, Menu, MenuProps } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { Content, Footer, Header } from "antd/es/layout/layout";
+import React from "react";
+import { Outlet } from "react-router-dom";
 
 const headerStyle: React.CSSProperties = {
   textAlign: "center",
   color: "#fff",
-  height: 64,
+  height: 55,
   paddingInline: 48,
-  lineHeight: "64px",
+  lineHeight: "65px",
   backgroundColor: "#4096ff",
 };
 
@@ -21,7 +23,6 @@ const contentStyle: React.CSSProperties = {
 
 const siderStyle: React.CSSProperties = {
   textAlign: "center",
-  lineHeight: "120px",
   color: "#fff",
   backgroundColor: "#1677ff",
 };
@@ -33,25 +34,54 @@ const footerStyle: React.CSSProperties = {
 };
 
 const layoutStyle = {
-  borderRadius: 8,
   overflow: "hidden",
-  width: "calc(50% - 8px)",
-  maxWidth: "calc(50% - 8px)",
+  width: "100%",
+  maxWidth: "100%",
+  minHeight: "100vh",
 };
 
-const MainLayout: React.FC = () => (
-  <Flex gap="middle" wrap="wrap">
-    <Layout style={layoutStyle}>
-      <Sider width="25%" style={siderStyle}>
-        Sider
-      </Sider>
-      <Layout>
-        <Header style={headerStyle}>Header</Header>
-        <Content style={contentStyle}>Content</Content>
-        <Footer style={footerStyle}>Footer</Footer>
+const items = [
+  {
+    key: "home",
+    label: "Home",
+  },
+  {
+    key: "buttons",
+    label: "Buttons",
+  },
+  {
+    key: "form",
+    label: "Form",
+  },
+];
+
+const MainLayout: React.FC = () => {
+  const onClick: MenuProps["onClick"] = (e) => {
+    console.log("click ", e);
+  };
+  return (
+    <Flex wrap="wrap">
+      <Layout style={layoutStyle}>
+        <Sider width="10%" style={siderStyle}>
+          <Menu
+            className="menuSider"
+            onClick={onClick}
+            // style={{ width: 256 }}
+            defaultSelectedKeys={["home"]}
+            mode="inline"
+            items={items}
+          />
+        </Sider>
+        <Layout>
+          <Header style={headerStyle}>AntDesign Test Project</Header>
+          <Content style={contentStyle}>
+            <Outlet />
+          </Content>
+          <Footer style={footerStyle}>Footer</Footer>
+        </Layout>
       </Layout>
-    </Layout>
-  </Flex>
-);
+    </Flex>
+  );
+};
 
 export default MainLayout;
