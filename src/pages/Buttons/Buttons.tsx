@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { DownloadOutlined } from "@ant-design/icons";
 import { Button, Divider, Flex, Radio } from "antd";
 import type { ConfigProviderProps } from "antd";
+import "./Buttons.scss";
 
 type SizeType = ConfigProviderProps["componentSize"];
 
 const Buttons: React.FC = () => {
   const [size, setSize] = useState<SizeType>("large"); // default is 'middle'
   return (
-    <>
+    <div className="buttonsWrapper">
       <Radio.Group value={size} onChange={(e) => setSize(e.target.value)}>
         <Radio.Button value="large">Large</Radio.Button>
         <Radio.Button value="default">Default</Radio.Button>
@@ -57,7 +58,7 @@ const Buttons: React.FC = () => {
           </Button>
         </Flex>
       </Flex>
-    </>
+    </div>
   );
 };
 

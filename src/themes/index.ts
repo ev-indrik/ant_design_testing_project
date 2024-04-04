@@ -5,10 +5,8 @@ export const theme: ThemeConfig = {
   components: {
     Typography: {
       colorText: "#FFFFFF",
+      colorTextHeading: "#FFFFFF",
+      colorLink: "#FFFFFF",
     },
   },
-  //   token: {
-  //     ...colors,
-  //     ...typography,
-  //   },
 };

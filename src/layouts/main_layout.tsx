@@ -53,6 +53,14 @@ const items = [
     key: "form",
     label: <NavLink to="forms">Forms</NavLink>,
   },
+  {
+    key: "dropdowns",
+    label: <NavLink to="dropdowns">Dropdowns</NavLink>,
+  },
+  {
+    key: "radiobt",
+    label: <NavLink to="radiobt">RadioBt</NavLink>,
+  },
 ];
 
 const MainLayout: React.FC = () => {
@@ -66,7 +74,6 @@ const MainLayout: React.FC = () => {
           <Menu
             className="menuSider"
             onClick={onClick}
-            // style={{ width: 256 }}
             defaultSelectedKeys={["home"]}
             mode="inline"
             items={items}
