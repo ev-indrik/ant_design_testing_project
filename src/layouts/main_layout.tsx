@@ -1,10 +1,10 @@
 import { Flex, Layout, Menu, MenuProps } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { Content, Footer, Header } from "antd/es/layout/layout";
-import React from "react";
+import React, { CSSProperties } from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
-const headerStyle: React.CSSProperties = {
+const headerStyle: CSSProperties = {
   textAlign: "center",
   color: "#fff",
   height: 55,
@@ -13,21 +13,21 @@ const headerStyle: React.CSSProperties = {
   backgroundColor: "#4096ff",
 };
 
-const contentStyle: React.CSSProperties = {
+const contentStyle: CSSProperties = {
   textAlign: "center",
   minHeight: 120,
   lineHeight: "120px",
-  color: "#fff",
-  backgroundColor: "#0958d9",
+  // color: "#fff",
+  // backgroundColor: "#fff",
 };
 
-const siderStyle: React.CSSProperties = {
+const siderStyle: CSSProperties = {
   textAlign: "center",
   color: "#fff",
   backgroundColor: "#1677ff",
 };
 
-const footerStyle: React.CSSProperties = {
+const footerStyle: CSSProperties = {
   textAlign: "center",
   color: "#fff",
   backgroundColor: "#4096ff",

@@ -13,8 +13,8 @@ export default function NotFound() {
           <Title level={4}>Oops! This page does not exist</Title>
         </Col>
       </Row>
-      <Row justify={"center"}>
-        <Col span={4}>
+      <Row justify={"center"} align={"bottom"} style={{ padding: 50 }}>
+        <Col span={5}>
           <Lottie animationData={animationData} />
         </Col>
       </Row>
