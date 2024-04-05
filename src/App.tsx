@@ -16,10 +16,11 @@ import Buttons from "./pages/Buttons/Buttons";
 import Dropdowns from "./pages/Dropdown/Dropdowns";
 import NotFound from "./pages/NotFoundPage";
 import RadioBt from "./pages/RadioBt/RadioBt";
+import Tables from "./pages/Tables/Tables";
+import Carousels from "./pages/Carousels/Carousels";
 
 //layouts
 import MainLayout from "./layouts/main_layout";
-import Tables from "./pages/Tables/Tables";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -30,6 +31,7 @@ const router = createBrowserRouter(
       <Route path="dropdowns" element={<Dropdowns />} />
       <Route path="radiobt" element={<RadioBt />} />
       <Route path="tables" element={<Tables />} />
+      <Route path="carousels" element={<Carousels />} />
     </Route>
   )
 );
