@@ -1,4 +1,5 @@
-import { Flex, Layout, Menu, MenuProps } from "antd";
+import { SunOutlined, UserOutlined } from "@ant-design/icons";
+import { Avatar, Col, Flex, Layout, Menu, MenuProps, Row } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { Content, Footer, Header } from "antd/es/layout/layout";
 import React, { CSSProperties } from "react";
@@ -71,6 +72,14 @@ const MainLayout: React.FC = () => {
     <Flex wrap="wrap">
       <Layout style={layoutStyle}>
         <Sider width="10%" style={siderStyle}>
+          <Row
+            justify={"center"}
+            style={{ minHeight: 50, paddingTop: 10, paddingBottom: 100 }}
+          >
+            <Col>
+              <SunOutlined style={{ fontSize: 35, color: "#E6F4FF" }} />
+            </Col>
+          </Row>
           <Menu
             className="menuSider"
             onClick={onClick}
@@ -78,7 +87,19 @@ const MainLayout: React.FC = () => {
             mode="inline"
             items={items}
           />
+
+          <Row justify={"center"} style={{ paddingTop: 250 }}>
+            <Col>
+              <Avatar
+                style={{ color: "#E6F4FF" }}
+                shape="square"
+                size={54}
+                icon={<UserOutlined />}
+              />
+            </Col>
+          </Row>
         </Sider>
+
         <Layout>
           <Header style={headerStyle}>AntDesign Test Project</Header>
           <Content style={contentStyle}>
