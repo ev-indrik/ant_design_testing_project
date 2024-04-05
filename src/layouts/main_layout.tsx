@@ -70,6 +70,10 @@ const items = [
     key: "carousels",
     label: <NavLink to="carousels">Carousels</NavLink>,
   },
+  {
+    key: "tabsFeature",
+    label: <NavLink to="tabsFeature">Tabs Feature</NavLink>,
+  },
 ];
 
 const MainLayout: React.FC = () => {
@@ -96,7 +100,7 @@ const MainLayout: React.FC = () => {
             items={items}
           />
 
-          <Row justify={"center"} style={{ paddingTop: 150 }}>
+          <Row justify={"center"} style={{ paddingTop: 130 }}>
             <Col>
               <Avatar
                 style={{ color: "#E6F4FF" }}

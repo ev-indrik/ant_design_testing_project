@@ -13,7 +13,7 @@ const contentStyle: CSSProperties = {
   color: "#fff",
   alignContent: "center",
   justifyItems: "center",
-  background: "#DFEDFF",
+  background: "#24A7AF",
 };
 
 const Carousels: FC = () => {

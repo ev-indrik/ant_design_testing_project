@@ -18,6 +18,7 @@ import NotFound from "./pages/NotFoundPage";
 import RadioBt from "./pages/RadioBt/RadioBt";
 import Tables from "./pages/Tables/Tables";
 import Carousels from "./pages/Carousels/Carousels";
+import TabsFeature from "./pages/Tabs/TabsFeature";
 
 //layouts
 import MainLayout from "./layouts/main_layout";
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
       <Route path="radiobt" element={<RadioBt />} />
       <Route path="tables" element={<Tables />} />
       <Route path="carousels" element={<Carousels />} />
+      <Route path="tabsFeature" element={<TabsFeature />} />
     </Route>
   )
 );
