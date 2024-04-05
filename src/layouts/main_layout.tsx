@@ -1,4 +1,4 @@
-import { SunOutlined, UserOutlined } from "@ant-design/icons";
+import { ShrinkOutlined, UserOutlined } from "@ant-design/icons";
 import { Avatar, Col, Flex, Layout, Menu, MenuProps, Row } from "antd";
 import Sider from "antd/es/layout/Sider";
 import { Content, Footer, Header } from "antd/es/layout/layout";
@@ -62,6 +62,10 @@ const items = [
     key: "radiobt",
     label: <NavLink to="radiobt">RadioBt</NavLink>,
   },
+  {
+    key: "tables",
+    label: <NavLink to="tables">Tables</NavLink>,
+  },
 ];
 
 const MainLayout: React.FC = () => {
@@ -77,7 +81,7 @@ const MainLayout: React.FC = () => {
             style={{ minHeight: 50, paddingTop: 10, paddingBottom: 100 }}
           >
             <Col>
-              <SunOutlined style={{ fontSize: 35, color: "#E6F4FF" }} />
+              <ShrinkOutlined spin style={{ fontSize: 35, color: "#E6F4FF" }} />
             </Col>
           </Row>
           <Menu
@@ -88,7 +92,7 @@ const MainLayout: React.FC = () => {
             items={items}
           />
 
-          <Row justify={"center"} style={{ paddingTop: 250 }}>
+          <Row justify={"center"} style={{ paddingTop: 200 }}>
             <Col>
               <Avatar
                 style={{ color: "#E6F4FF" }}

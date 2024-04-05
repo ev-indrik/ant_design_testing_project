@@ -19,6 +19,7 @@ import RadioBt from "./pages/RadioBt/RadioBt";
 
 //layouts
 import MainLayout from "./layouts/main_layout";
+import Tables from "./pages/Tables/Tables";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
       <Route path="*" element={<NotFound />} />
       <Route path="dropdowns" element={<Dropdowns />} />
       <Route path="radiobt" element={<RadioBt />} />
+      <Route path="tables" element={<Tables />} />
     </Route>
   )
 );
